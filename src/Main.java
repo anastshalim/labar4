@@ -55,28 +55,28 @@ public class Main {
         lantern.OFF();
         margarita.transform();
         margarita.undressed();
-        Hold holdbox = new Hold() {
-            private boolean a;
+        Hold holdBox = new Hold() {
+            private boolean cheking;
 
-            public boolean isA() {
-                return a;
+            public boolean isCheking() {
+                return cheking;
             }
 
-            public void setA(boolean a) {
-                this.a = a;
+            public void setCheking(boolean cheking) {
+                this.cheking = cheking;
             }
 
             @Override
             public void holdObject(Item item) {
                 if (box.isOpen()) {
                     box.setOwner(margarita);
-                    setA(true);
+                    setCheking(true);
                 }
-                if (!isA()){
+                if (!isCheking()){
                     box.setOpen(true);
                 }
             }
         };
-        holdbox.holdObject(box);
+        holdBox.holdObject(box);
     }
 }

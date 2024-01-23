@@ -8,8 +8,7 @@ public class Hair extends BodyPart {
         super(owner);
     }
 
-    @Override
-    public void change() {
+    public void hairChange() {
         removeCharacteristics(BodyCondition.PERMING);
         addCharacteristics(BodyCondition.CURLY);
         addCharacteristics(BodyCondition.BLACKHAIRED);

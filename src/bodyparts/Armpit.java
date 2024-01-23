@@ -9,10 +9,6 @@ public class Armpit extends BodyPart implements Hold {
         super(owner);
     }
 
-    @Override
-    public void change() {
-        getOwner().setHealth(60);
-    }
 
     @Override
     public void holdObject(Item item) {

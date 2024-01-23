@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 abstract public class BodyPart {
-    private final Entity owner;
+    protected final Entity owner;
     protected  ArrayList<BodyCondition> characteristics = new ArrayList<>();
 
     public BodyPart(Entity owner) {
@@ -29,5 +29,4 @@ abstract public class BodyPart {
     public Entity getOwner() {
         return owner;
     }
-    public abstract void change();
 }

@@ -7,11 +7,6 @@ public class Hurt extends BodyPart {
         super(owner);
     }
 
-    @Override
-    public void change() {
-        getOwner().setHealth(80);
-    }
-
     public void pound(){
         getOwner().setHealth(100);
     }

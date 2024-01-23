@@ -36,8 +36,8 @@ public class Margarita extends character.Entity {
         fingers.touchCream();
         hurt.pound();
         setAge(20);
-        hair.change();
-        face.change();
+        hair.hairChange();
+        face.faceChange();
         this.setWeight(getWeight()-20);
         lips.bite();
         try {

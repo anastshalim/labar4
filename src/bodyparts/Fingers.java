@@ -11,13 +11,8 @@ public class Fingers extends BodyPart {
     public Fingers(Entity owner) {
         super(owner);
     }
-
-    @Override
-    public void change() {
-        getOwner().setHealth(100);
-    }
     public void touchCream(){
-        Location location=new Location("кончики пальцев");
+        Location location=new Location("кончики");
         Box box = new Box(50, location, Material.PLASTIC);
         box.Open();
     }

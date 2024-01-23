@@ -8,10 +8,6 @@ public class Legs extends BodyPart {
         super(owner);
     }
 
-    @Override
-    public void change() {
-        getOwner().setHealth(100);
-    }
 
     public void weightlessness() throws WrongWeightException{
         if (getWeight() < 0){

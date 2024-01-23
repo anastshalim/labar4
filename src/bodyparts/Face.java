@@ -14,8 +14,7 @@ public class Face extends BodyPart {
             super(owner);
         }
 
-        @Override
-        public void change() {
+        public void eyebrowsChange() {
             Face.this.removeCharacteristics(BodyCondition.PLUCKED);
             Face.this.addCharacteristics(BodyCondition.THICK);
         }
@@ -27,8 +26,8 @@ public class Face extends BodyPart {
             super(owner);
         }
 
-        @Override
-        public void change() {
+
+        public void foreheadChange() {
             Face.this.removeCharacteristics(BodyCondition.WRINKLED);
             Face.this.addCharacteristics(BodyCondition.WHITE, BodyCondition.CLEAN);
         }
@@ -40,8 +39,8 @@ public class Face extends BodyPart {
             super(owner);
         }
 
-        @Override
-        public void change() {
+
+        public void cheeksChange() {
             Face.this.addCharacteristics(BodyCondition.PINK);
         }
     }
@@ -51,22 +50,22 @@ public class Face extends BodyPart {
             super(owner);
         }
 
-        @Override
-        public void change() {
+
+        public void eyelidsChange() {
             Face.this.removeCharacteristics(BodyCondition.GREENLY);
             Face.this.addCharacteristics(BodyCondition.YELLOW);
         }
     }
 
-    @Override
-    public void change() {
+
+    public void faceChange() {
         Eyebrows eyebrows = new Eyebrows(this.getOwner());
         Forehead forehead = new Forehead(this.getOwner());
         Cheeks cheeks = new Cheeks(this.getOwner());
         Eyelids eyelids = new Eyelids(this.getOwner());
-        eyebrows.change();
-        forehead.change();
-        cheeks.change();
-        eyelids.change();
+        eyebrows.eyebrowsChange();
+        forehead.foreheadChange();
+        cheeks.cheeksChange();
+        eyelids.eyelidsChange();
     }
 }
